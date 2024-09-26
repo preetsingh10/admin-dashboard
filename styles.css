@@ -5,6 +5,7 @@
 :root {
   --primary-color: #2563eb;
   --secondary-color: #1e3a8a;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .profile-pic {
@@ -135,19 +136,22 @@
     display: grid;
     gap: 25px;
     grid-template-columns: repeat(2,minmax(200px,1fr));
-    margin: 1rem;
+    /* margin: 0.5rem; */
+    margin-bottom: auto;
+    justify-items: center;
 }
 .project-cards-container-heading,.announcements-container-heading,.trending-container-heading{
-    margin: 30px  ;
-}
+    margin: 20px 30px 0 30px;
+  }
 .card{
-    border-left: 5px solid #c1c0c0;
-    padding: 0.5rem 1rem; 
+    border-left: 5px solid rgb(243, 186, 40);
+    padding: 1rem 1rem 0 1rem; 
+    line-height: 1.6;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 80%;
     border-radius: 10px;
     box-shadow: 0px 1px 3px 0px black
 }
@@ -159,7 +163,8 @@
 }
 .announcements-container,.trending-container{
     padding:  1rem; 
-    margin:1rem;
+    margin:0.52em;
+    margin-right: 2rem;
     background-color: white;
     display: flex;
     flex-direction: column;
