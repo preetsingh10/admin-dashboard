@@ -3,15 +3,20 @@
   margin: 0;
 }
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #1e3a8a;
+  --primary-color: #d1d5db;
+  --secondary-color: #54565b;
+  --button-color:#111827;
+
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+svg{
+  fill: black;
 }
 
 .profile-pic {
   width: 50px;
   height: 50px;
-  border: 1px solid;
+
   border-radius: 30px;
 }
 .container {
@@ -23,6 +28,12 @@
 .header {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  background-color: rgba(13, 13, 13, 0.098);
+  backdrop-filter: blur(100px);
+  /* box-shadow: 4px 2px 4px black; */
+  box-shadow: 8px 1px 9px 0px black
+
+
   /* gap: 10px; */
 }
 .search-and-profile-container {
@@ -70,7 +81,7 @@
   width: 70px;
   height: 40px;
   border-radius: 7px;
-  background-color: #2563eb;
+  background-color: var(--button-color);
   color: white;
   border: none;
   cursor: pointer;
@@ -84,15 +95,16 @@
 .sidebar {
   grid-row: span 2;
   background-color: var(--primary-color);
-  color: white;
+  
   padding: 25px;
   display: flex;
   flex-direction: column;
   gap: 100px;
+  backdrop-filter: blur(10px);
 }
 .sidebar svg {
-  fill: white;
-  width: 2.5rem;
+  fill: black;
+  width: 35px;
 }
 .sidebar-heading {
   display: flex;
@@ -125,8 +137,8 @@
 /* Main  */
 
 .main{
-    background-color:rgba(229, 226, 226, 0.593) ;
-    display: grid;
+
+ display: grid;
     gap: 15px;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 50px 1fr 50px 1fr;
@@ -134,24 +146,25 @@
 .project-cards-container{
     grid-area: 2/1/5/2;
     display: grid;
-    gap: 25px;
+    gap: 15px;
     grid-template-columns: repeat(2,minmax(200px,1fr));
     /* margin: 0.5rem; */
-    margin-bottom: auto;
+    height: 70vh;
     justify-items: center;
 }
 .project-cards-container-heading,.announcements-container-heading,.trending-container-heading{
     margin: 20px 30px 0 30px;
   }
 .card{
-    border-left: 5px solid rgb(243, 186, 40);
+    border-left: 3px solid rgba(9, 9, 9, 0.279);
     padding: 1rem 1rem 0 1rem; 
     line-height: 1.6;
-    background-color: white;
+    background-color: rgba(13, 13, 13, 0.098);
+    backdrop-filter: blur(100px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     border-radius: 10px;
     box-shadow: 0px 1px 3px 0px black
 }
@@ -161,12 +174,15 @@
     display: flex;
     gap: 15px;
 }
+.card-options svg{
+  width: 30px;
+}
 .announcements-container,.trending-container{
     padding:  1rem; 
     margin:0.52em;
     margin-right: 2rem;
-    background-color: white;
-    display: flex;
+    background-color: rgba(13, 13, 13, 0.098);
+    backdrop-filter: blur(100px);    display: flex;
     flex-direction: column;
     gap: 30px;
     border-radius: 10px;
